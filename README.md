@@ -1,2 +1,4 @@
 # Simple_Snake_Game_JS
-Simple Snake Game Using HTML , CSS , Pure JS
+Neon Snake game: HTML, CSS, pure JavaScript (canvas).
+
+Open `index.html` in a browser.

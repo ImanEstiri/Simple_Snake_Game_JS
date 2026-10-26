@@ -1,19 +1,49 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="assets/style.css"/>
-    <title>Tik Tak Toe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link type="text/css" rel="stylesheet" href="assets/style.css"/>
+<script src="assets/script.js" defer></script>
+<title>مار نئون</title>
 </head>
 <body>
-    <div id="gameContainer">
-        <canvas id="gameBoard" width="500px" height="500px"></canvas>
-        <div class="pullLeft">
-            <div id="scoreText">0</div>
-            <button id="resetBtn">Reset</button>
-        </div>
-    </div>
-    <script src="assets/script.js"></script>
+<main class="app">
+  <h1><span>مار</span> <b>نئون</b></h1>
+  <div class="score">
+    <div class="sx"><strong id="sc">0</strong>امتیاز</div>
+    <div><strong id="ln">0</strong>طول</div>
+    <div class="so"><strong id="bs">0</strong>رکورد</div>
+  </div>
+  <div class="stage" id="stage">
+    <canvas id="cv"></canvas>
+    <div id="ov"><h2 id="ovt"></h2><p id="ovs"></p></div>
+  </div>
+  <div class="pad">
+    <button data-d="u" style="grid-column:2">▲</button>
+    <button data-d="l" style="grid-row:2">◀</button>
+    <button data-d="d" style="grid-row:2">▼</button>
+    <button data-d="r" style="grid-row:2">▶</button>
+  </div>
+  <div class="acts">
+    <button class="main" id="go">بازی جدید</button>
+    <button id="pz">⏸ مکث</button>
+    <button id="set">⚙️ تنظیمات</button>
+  </div>
+</main>
+<dialog id="dlg">
+  <h2>⚙️ تنظیمات</h2>
+  <label>دیوارها</label>
+  <div class="seg" id="sWalls"><button data-v="wrap">عبور از دیوار</button><button data-v="solid">برخورد کشنده</button></div>
+  <label>سرعت پایه</label>
+  <div class="seg" id="sSpeed"><button data-v="slow">آرام</button><button data-v="normal">عادی</button><button data-v="fast">سریع</button></div>
+  <div class="tg"><span>افزایش تدریجی سرعت</span><input type="checkbox" id="prog"></div>
+  <div class="tg"><span>غذای طلایی (امتیاز ۵، موقت)</span><input type="checkbox" id="gld"></div>
+  <div class="tg"><span>مانع‌ها</span><input type="checkbox" id="obs"></div>
+  <div class="tg"><span>لرزش و افکت ذرات</span><input type="checkbox" id="fxc"></div>
+  <div class="tg"><span>صدا</span><input type="checkbox" id="snd"></div>
+  <p class="hint">رکورد برای هر ترکیب از قوانین (دیوار، سرعت، افزایش سرعت، طلایی، مانع) جداگانه ذخیره می‌شود. کنترل: جهت‌نماها یا WASD، فاصله/P برای مکث، Enter برای شروع. در موبایل با کشیدن انگشت یا دکمه‌ها.</p>
+  <div class="acts"><button class="main" id="ok">اعمال و شروع</button><button id="cancel">بستن</button></div>
+</dialog>
 </body>
 </html>
